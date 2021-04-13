@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poker</title>
+    <style>
+        head {
+            margin: 0;
+            border: 0;
+        }
+
+        body {
+            margin: 0;
+            border: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-image: url("fotos/mesa.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .carta {
+            background-image: url("fotos/blue_back.jpg");
+            height: 110px;
+            width: 70px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h3 {
+            background-color: rgb(203, 212, 255);
+            color: rgb(4, 0, 59);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            width: 7rem;
+        }
+
+        h4 {
+            background-color: rgb(187, 195, 233);
+            color: rgb(4, 0, 59);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2rem;
+            width: 10rem;
+        }
+        
+        .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #distribuir {
+            position: absolute;
+            z-index: inherit;
+            top: 89%;
+            left: 20%;
+            height: 30px;
+            width: 100px;
+        }
+
+        #idflop {
+            position: absolute;
+            z-index: inherit;
+            top: 89%;
+            left: 40%;
+            height: 30px;
+            width: 100px;
+            display: none;
+        }
+        .board {
+            position: absolute;
+            z-index: 10;
+        }
+        #idturn {
+            display: none;
+            position: absolute;
+            z-index: inherit;
+            top: 89%;
+            left: 40%;
+            height: 30px;
+            width: 100px;
+        }
+        #idriver {
+            display: none;
+            position: absolute;
+            z-index: inherit;
+            top: 89%;
+            left: 40%;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container1">
+        <h3>Jogador 1</h3>
+        <img class="carta" id="carta01">
+        <img class="carta" id="carta02">
+
+        <h3>Jogador 2</h3>
+        <img class="carta" id="carta11">
+        <img class="carta" id="carta12">
+
+        <h3>Jogador 3</h3>
+        <img class="carta" id="carta21">
+        <img class="carta" id="carta22">
+
+        <h3>Jogador 4</h3>
+        <img class="carta" id="carta31">
+        <img class="carta" id="carta32">
+    </div>
+
+    <div class="container1">
+        <h3>Jogador 5</h3>
+        <img class="carta" id="carta41">
+        <img class="carta" id="carta42">
+
+        <h3>Jogador 6</h3>
+        <img class="carta" id="carta51">
+        <img class="carta" id="carta52">
+
+        <h3>Jogador 7</h3>
+        <img class="carta" id="carta61">
+        <img class="carta" id="carta62">
+
+        <h3>Jogador 8</h3>
+        <img class="carta" id="carta71">
+        <img class="carta" id="carta72">
+    </div>
+
+    <div class="container1">
+        <h3>Jogador 9</h3>
+        <img class="carta" id="carta81">
+        <img class="carta" id="carta82">
+    </div>
+
+    <div class = "board">
+        <h4>BOARD</h4>
+        <img class="carta" id="carta91">
+        <img class="carta" id="carta92">
+        <img class="carta" id="carta93">
+        <img class="carta" id="carta94">
+        <img class="carta" id="carta95">
+    </div>
+
+    <button id="distribuir" onclick="distribuir()">Distribuir</button>
+    <button id="idflop" onclick="dealflop()">Flop</button>
+    <button id="idturn" onclick="dealTurn()">Turn</button>
+    <button id="idriver" onclick="dealRiver()">River</button>
+
+    <script src="baralho.js"></script>
+    <script src="forca.js"></script>
+</body>
+
+</html>
